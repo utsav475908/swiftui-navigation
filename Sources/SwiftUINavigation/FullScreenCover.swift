@@ -53,7 +53,7 @@
       onDismiss: (() -> Void)? = nil,
       @ViewBuilder content: @escaping (Binding<Item>) -> Content
     ) -> some View {
-      fullScreenCover(item: item[id: id], onDismiss: onDismiss) { 
+      fullScreenCover(item: item[id: id], onDismiss: onDismiss) {
         content(Binding(unwrapping: item, default: $0.initialValue))
       }
     }
